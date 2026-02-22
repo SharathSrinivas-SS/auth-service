@@ -27,6 +27,7 @@ nb-configuration.xml
 
 # OSX
 .DS_Store
+Thumbs.db
 
 # Vim
 *.swp
@@ -43,3 +44,10 @@ nb-configuration.xml
 /.quarkus/cli/plugins/
 # TLS Certificates
 .certs/
+
+# Logs
+*.log
+
+# JWT Keys
+src/main/resources/privateKey.pem
+src/main/resources/publicKey.pem

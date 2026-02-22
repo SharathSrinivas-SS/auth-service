@@ -7,12 +7,16 @@ import java.util.List;
 
 @ApplicationScoped
 public class UserService {
-    public void createUser(String email, String password){
+    public void createUser(String email, String password) {
         User user = new User();
         user.email = email;
         user.password = password;
         user.roles = List.of("USER");
         user.persist();
+    }
+
+    public User findByEmail(String email) {
+        return User.find("email", email).firstResult();
     }
 
     public boolean existByEmail(String email){
